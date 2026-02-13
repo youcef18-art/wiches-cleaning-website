@@ -1,170 +1,129 @@
-/* ===== MOBILE NAVIGATION ===== */
-const navMenu = document.getElementById('nav-menu');
-const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
+/* ===== WITCHES' CLEANING - MAIN JS ===== */
+document.addEventListener('DOMContentLoaded', () => {
 
-// Show menu
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
-    });
-}
+    // Mobile Navigation
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
 
-// Hide menu
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-    });
-}
-
-// Close menu when clicking on nav links
-const navLinks = document.querySelectorAll('.nav__link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
-    });
-});
-
-/* ===== HEADER SHADOW ON SCROLL ===== */
-function scrollHeader() {
-    const header = document.querySelector('.header');
-    if (this.scrollY >= 50) {
-        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show-menu');
+            const icon = navToggle.querySelector('i');
+            icon.classList.toggle('uil-bars');
+            icon.classList.toggle('uil-times');
+        });
     }
-}
 
-window.addEventListener('scroll', scrollHeader);
+    // Close menu on link click
+    document.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu');
+        });
+    });
 
-/* ===== FAQ ACCORDION ===== */
-const faqItems = document.querySelectorAll('.faq-item');
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(15, 10, 26, 0.98)';
+            header.style.boxShadow = '0 4px 30px rgba(124, 58, 237, 0.1)';
+        } else {
+            header.style.background = 'rgba(15, 10, 26, 0.85)';
+            header.style.boxShadow = 'none';
+        }
+    });
 
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-    
-    question.addEventListener('click', () => {
-        // Close other open items
-        faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
+    // Scroll reveal animations
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
             }
         });
-        
-        // Toggle current item
-        item.classList.toggle('active');
+    }, observerOptions);
+
+    document.querySelectorAll('.service-card, .pricing-card, .testimonial-card, .faq-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
     });
-});
 
-/* ===== CONTACT FORM HANDLING ===== */
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const formMessage = document.getElementById('formMessage');
-        
-        // Simulate form submission (in production, this would send to a server)
-        // Send form data to n8n webhook
-            const data = Object.fromEntries(formData);
-            fetch('https://spectranexsussystems.app.n8n.cloud/webhook/wiches-cleaning-contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            }).then(response => {
-                formMessage.textContent = 'Thank you! We will get back to you within 24 hours.';
-                formMessage.classList.remove('error');
-                formMessage.classList.add('success');
-                this.reset();
-            }).catch(error => {
-                formMessage.textContent = 'Thank you for your message! We will contact you soon.';
-                formMessage.classList.remove('error');
-                formMessage.classList.add('success');
-                this.reset();
-            });
-        // Hide message after 5 seconds
+    // Language banner dismiss
+    const langBanner = document.getElementById('langBanner');
+    if (langBanner) {
         setTimeout(() => {
-            formMessage.style.display = 'none';
-            formMessage.classList.remove('success');
-        }, 5000);
-    });
-}
+            langBanner.style.transition = 'transform 0.3s ease';
+        }, 100);
+    }
 
-/* ===== SMOOTH SCROLL FOR ANCHOR LINKS ===== */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        
-        // Only prevent default for hash links, not empty hrefs
-        if (href !== '#' && href.length > 1) {
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            const target = document.querySelector(href);
+            const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-        }
+        });
     });
+
+    // Counter animation for stats
+    const counters = document.querySelectorAll('.stat__number');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const text = target.textContent;
+                if (text.includes('+')) {
+                    const num = parseInt(text);
+                    animateCounter(target, 0, num, 2000, '+');
+                }
+                counterObserver.unobserve(target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    function animateCounter(el, start, end, duration, suffix) {
+        const range = end - start;
+        const increment = range / (duration / 16);
+        let current = start;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= end) {
+                el.textContent = end + (suffix || '');
+                clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(current) + (suffix || '');
+            }
+        }, 16);
+    }
+
+    // Form submission with n8n webhook
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+            try {
+                const response = await fetch('https://n8n.spectra-nexus.com/webhook/witches-cleaning-contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (response.ok) {
+                    alert('Thank you! Your message has been sent. We will get back to you shortly.');
+                    contactForm.reset();
+                }
+            } catch (error) {
+                alert('Something went wrong. Please try again or call us directly.');
+            }
+        });
+    }
 });
-
-/* ===== ANIMATION ON SCROLL ===== */
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-const animateElements = document.querySelectorAll('.service-card, .pricing-card, .testimonial-card, .feature-card, .value-card, .stat-card');
-
-animateElements.forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(30px)';
-    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(element);
-});
-
-/* ===== SET MINIMUM DATE FOR CONTACT FORM ===== */
-const dateInput = document.getElementById('date');
-if (dateInput) {
-    const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    
-    const minDate = tomorrow.toISOString().split('T')[0];
-    dateInput.setAttribute('min', minDate);
-}
-
-/* ===== ACTIVE NAVIGATION HIGHLIGHT ===== */
-function highlightActiveNav() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        const linkPage = link.getAttribute('href');
-        
-        if (linkPage === currentPage || 
-            (currentPage === '' && linkPage === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
-}
-
-highlightActiveNav();
