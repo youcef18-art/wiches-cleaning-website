@@ -68,13 +68,23 @@ if (contactForm) {
         const formMessage = document.getElementById('formMessage');
         
         // Simulate form submission (in production, this would send to a server)
-        formMessage.textContent = 'Thank you for your message! We will get back to you within 24 hours.';
-        formMessage.classList.remove('error');
-        formMessage.classList.add('success');
-        
-        // Reset form
-        this.reset();
-        
+        // Send form data to n8n webhook
+            const data = Object.fromEntries(formData);
+            fetch('https://spectranexsussystems.app.n8n.cloud/webhook/wiches-cleaning-contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).then(response => {
+                formMessage.textContent = 'Thank you! We will get back to you within 24 hours.';
+                formMessage.classList.remove('error');
+                formMessage.classList.add('success');
+                this.reset();
+            }).catch(error => {
+                formMessage.textContent = 'Thank you for your message! We will contact you soon.';
+                formMessage.classList.remove('error');
+                formMessage.classList.add('success');
+                this.reset();
+            });
         // Hide message after 5 seconds
         setTimeout(() => {
             formMessage.style.display = 'none';
