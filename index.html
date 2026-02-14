@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Witches' Cleaning - Magical cleaning services for your home and business in Ottawa-Gatineau. Professional, eco-friendly, and enchanting results.">
-    <meta name="keywords" content="cleaning services, Ottawa, Gatineau, residential cleaning, commercial cleaning, deep cleaning, magical cleaning">
-    <title>Witches' Cleaning | Magical Clean for Your Home - Ottawa-Gatineau</title>
+    <meta name="description" content="Witches' Cleaning - Professional cleaning services for your home and business in Ottawa-Gatineau. Get an instant quote online.">
+    <meta name="keywords" content="cleaning services, Ottawa, Gatineau, residential cleaning, commercial cleaning, deep cleaning, quote calculator">
+    <title>Witches' Cleaning | Professional Cleaning Ottawa-Gatineau</title>
     <link rel="icon" type="image/png" href="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350802.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -13,17 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Language Switcher Banner -->
+    <!-- Language Banner -->
     <div class="lang-banner" id="langBanner">
         <div class="container">
-            <span id="langText">This site is also available in French</span>
+            <span>This site is also available in French</span>
             <a href="fr/index.html" class="lang-switch-btn" id="langSwitchBtn">
-                <i class="uil uil-globe"></i> Fran\u00e7ais
+                <i class="uil uil-globe"></i> Français
             </a>
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Header -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
@@ -32,133 +32,230 @@
             </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li><a href="index.html" class="nav__link active">Home</a></li>
+                    <li><a href="#services" class="nav__link">Services</a></li>
+                    <li><a href="#quote" class="nav__link">Get Quote</a></li>
+                    <li><a href="#pricing" class="nav__link">Pricing</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
-                <a href="contact.html" class="nav__cta"><i class="uil uil-magic-wand"></i> Book a Spell</a>
+                <a href="#quote" class="nav__cta"><i class="uil uil-calculator"></i> Free Quote</a>
             </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-bars"></i>
-            </div>
+            <div class="nav__toggle" id="nav-toggle"><i class="uil uil-bars"></i></div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero__particles" id="particles"></div>
-        <div class="hero__content container">
-            <div class="hero__text">
-                <span class="hero__badge"><i class="uil uil-star"></i> Magical Cleaning Experts</span>
-                <h1 class="hero__title">We Make Your Space <span class="magic-text">Sparkle</span> Like Magic</h1>
-                <p class="hero__description">Enchanting cleaning services for homes and businesses across Ottawa-Gatineau. Our team of cleaning wizards transforms every space with care, precision, and a touch of magic.</p>
-                <div class="hero__buttons">
-                    <a href="contact.html" class="btn btn--primary"><i class="uil uil-calendar-alt"></i> Book Your Cleaning</a>
-                    <a href="services.html" class="btn btn--outline"><i class="uil uil-arrow-right"></i> Explore Services</a>
+    <!-- Hero -->
+    <main>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <span class="hero__badge"><i class="uil uil-star"></i> Trusted Cleaning Experts</span>
+                    <h1 class="hero__title">Spotless Homes &amp; Offices in <span class="magic-text">Ottawa-Gatineau</span></h1>
+                    <p class="hero__description">Professional cleaning you can trust. Book online in 60 seconds and relax while we make your space shine.</p>
+                    <div class="hero__buttons">
+                        <a href="#quote" class="btn btn--primary btn--lg"><i class="uil uil-calculator"></i> Get Free Quote</a>
+                        <a href="#services" class="btn btn--outline btn--lg"><i class="uil uil-arrow-right"></i> Our Services</a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <span class="stat__number" data-count="500">500+</span>
+                            <span class="stat__label">Happy Homes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">5.0</span>
+                            <span class="stat__label"><i class="uil uil-star"></i> Rating</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">100%</span>
+                            <span class="stat__label">Fully Insured</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero__stats">
-                    <div class="stat">
-                        <span class="stat__number">500+</span>
-                        <span class="stat__label">Happy Homes</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">5.0</span>
-                        <span class="stat__label"><i class="uil uil-star"></i> Rating</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">24/7</span>
-                        <span class="stat__label">Support</span>
-                    </div>
+                <div class="hero__visual">
+                    <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" alt="Witches Cleaning - Professional Cleaning Services" class="hero__image">
                 </div>
-            </div>
-            <div class="hero__visual">
-                <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" alt="Witches Cleaning - Magical Clean for Your Home" class="hero__image">
-                <div class="hero__glow"></div>
             </div>
         </div>
     </section>
 
-    <!-- Video Showcase -->
-    <section class="video-showcase" id="video">
+    <!-- Quote Section: Form + Calculator -->
+    <section class="quote-form-section" id="quote">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-play-circle"></i> See the Magic</span>
-                <h2 class="section-title">Watch Our Wizards in Action</h2>
-                <p class="section-subtitle">See how our enchanted cleaning team transforms spaces from ordinary to extraordinary</p>
+                <span class="section-badge"><i class="uil uil-receipt"></i> Free Estimate</span>
+                <h2 class="section-title">Get Your Instant Quote</h2>
+                <p class="section-subtitle">Fill out the form for a personalized quote, or use our calculator to see pricing instantly</p>
             </div>
-            <div class="video-wrapper">
-                <video controls poster="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" class="showcase-video">
-                    <source src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b32f2dd985e2d59a245d.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="quote-form-wrapper">
+                <!-- Quick Quote Form -->
+                <div class="quote-form-card">
+                    <h3><i class="uil uil-envelope-edit"></i> Quick Free Quote</h3>
+                    <p class="subtitle">Tell us about your space and we'll get back to you within an hour</p>
+                    <form id="quoteForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="qName">Your Name</label>
+                                <input type="text" id="qName" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="qEmail">Email Address</label>
+                                <input type="email" id="qEmail" name="email" placeholder="you@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="qPhone">Phone Number</label>
+                                <input type="tel" id="qPhone" name="phone" placeholder="(613) 555-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="qService">Service Type</label>
+                                <select id="qService" name="service" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="residential">Residential Weekly</option>
+                                    <option value="commercial">Commercial Cleaning</option>
+                                    <option value="deep">Deep / Move-In Clean</option>
+                                    <option value="windows">Windows &amp; Carpets</option>
+                                    <option value="eco">Eco-Green Cleaning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="qMessage">Additional Details</label>
+                            <textarea id="qMessage" name="message" placeholder="Tell us about your space, any special requests..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="uil uil-message"></i> Get My Free Quote</button>
+                    </form>
+                    <p class="form-phone-link">Or call us: <a href="tel:+16135551234">(613) 555-1234</a></p>
+                </div>
+                <!-- Instant Quote Calculator -->
+                <div class="quote-calc-card">
+                    <h3><i class="uil uil-calculator-alt"></i> Instant Price Calculator</h3>
+                    <p class="subtitle">Customize your cleaning and see real-time pricing. No hidden fees.</p>
+                    <div class="calc-group">
+                        <label>Square Footage <span id="sqftValue">1,500 sq ft</span></label>
+                        <input type="range" id="sqftSlider" min="500" max="5000" value="1500" step="100">
+                    </div>
+                    <div class="calc-group">
+                        <label>Bedrooms <span id="bedroomValue">3</span></label>
+                        <input type="range" id="bedroomSlider" min="1" max="6" value="3">
+                    </div>
+                    <div class="calc-group">
+                        <label>Bathrooms <span id="bathroomValue">2</span></label>
+                        <input type="range" id="bathroomSlider" min="1" max="5" value="2">
+                    </div>
+                    <label style="font-size:0.85rem;font-weight:600;color:#475569;margin-bottom:0.5rem;display:block;">Frequency</label>
+                    <div class="frequency-options">
+                        <div class="freq-option active" data-freq="once" data-discount="0">One-Time</div>
+                        <div class="freq-option" data-freq="weekly" data-discount="15">Weekly <small>-15%</small></div>
+                        <div class="freq-option" data-freq="biweekly" data-discount="10">Bi-Weekly <small>-10%</small></div>
+                        <div class="freq-option" data-freq="monthly" data-discount="5">Monthly <small>-5%</small></div>
+                    </div>
+                    <label style="font-size:0.85rem;font-weight:600;color:#475569;margin-bottom:0.5rem;display:block;">Add-ons</label>
+                    <div class="addons-grid">
+                        <label class="addon-item"><input type="checkbox" data-price="50"> Deep Clean +$50</label>
+                        <label class="addon-item"><input type="checkbox" data-price="20"> Inside Fridge +$20</label>
+                        <label class="addon-item"><input type="checkbox" data-price="25"> Inside Oven +$25</label>
+                        <label class="addon-item"><input type="checkbox" data-price="40"> Windows +$40</label>
+                        <label class="addon-item"><input type="checkbox" data-price="35"> Laundry +$35</label>
+                        <label class="addon-item"><input type="checkbox" data-price="30"> Carpet +$30</label>
+                    </div>
+                    <div class="calc-total">
+                        <div class="price">$<span id="calcPrice">174</span></div>
+                        <div class="price-label">estimated per visit</div>
+                        <a href="#quote" class="btn btn--white"><i class="uil uil-file-alt"></i> Get Detailed Quote</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Video Showcase (Discrete) -->
+    <section class="video-showcase">
+        <div class="container">
+            <div class="video-content">
+                <div class="video-wrapper">
+                    <video controls poster="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" class="showcase-video">
+                        <source src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b32f2dd985e2d59a245d.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>See Our Team in Action</h3>
+                    <p>Watch how our professional cleaning team transforms spaces across Ottawa-Gatineau with care, precision, and eco-friendly products.</p>
+                    <ul class="video-features">
+                        <li><i class="uil uil-check-circle"></i> Fully trained &amp; insured professionals</li>
+                        <li><i class="uil uil-check-circle"></i> Eco-friendly cleaning products</li>
+                        <li><i class="uil uil-check-circle"></i> Satisfaction guaranteed on every visit</li>
+                        <li><i class="uil uil-check-circle"></i> Flexible scheduling 7 days a week</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-cleaning-flask"></i> Our Spells</span>
-                <h2 class="section-title">Enchanted Cleaning Services</h2>
-                <p class="section-subtitle">Professional solutions tailored to make every corner of your space shine</p>
+                <span class="section-badge"><i class="uil uil-brush-alt"></i> Our Services</span>
+                <h2 class="section-title">Professional Cleaning Solutions</h2>
+                <p class="section-subtitle">Reliable, thorough, and tailored to every space</p>
             </div>
             <div class="services__grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-card__icon"><i class="uil uil-home-alt"></i></div>
-                    <h3 class="service-card__title">Residential Cleaning</h3>
-                    <p class="service-card__desc">Keep your home sparkling clean with our comprehensive residential cleaning services. Every room, every surface, enchanted to perfection.</p>
-                    <a href="services.html#residential" class="service-card__link">Learn More <i class="uil uil-arrow-right"></i></a>
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="uil uil-home"></i></div>
+                    <h3 class="service-card__title">Residential Weekly</h3>
+                    <p class="service-card__desc">Regular maintenance cleaning to keep your home spotless every week. Dusting, vacuuming, kitchen and bathroom sanitizing.</p>
+                    <a href="#quote" class="service-card__link">Get Quote <i class="uil uil-arrow-right"></i></a>
                 </div>
-                <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
                     <div class="service-card__icon"><i class="uil uil-building"></i></div>
                     <h3 class="service-card__title">Commercial Cleaning</h3>
-                    <p class="service-card__desc">Professional cleaning for offices, retail spaces, and commercial properties. Your business deserves a magical first impression.</p>
-                    <a href="services.html#commercial" class="service-card__link">Learn More <i class="uil uil-arrow-right"></i></a>
+                    <p class="service-card__desc">Office spaces, retail stores, and business facilities cleaned after hours. Professional and discreet service.</p>
+                    <a href="#quote" class="service-card__link">Get Quote <i class="uil uil-arrow-right"></i></a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card__icon"><i class="uil uil-search-plus"></i></div>
-                    <h3 class="service-card__title">Deep Cleaning</h3>
-                    <p class="service-card__desc">Thorough top-to-bottom cleaning for a fresh start or special occasions. No dust bunny can hide from our spells.</p>
-                    <a href="services.html#deep" class="service-card__link">Learn More <i class="uil uil-arrow-right"></i></a>
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="uil uil-sparkles"></i></div>
+                    <h3 class="service-card__title">Deep / Move-In Clean</h3>
+                    <p class="service-card__desc">Thorough deep cleaning for moves, renovations, or seasonal refreshes. Inside appliances, baseboards, cabinets.</p>
+                    <a href="#quote" class="service-card__link">Get Quote <i class="uil uil-arrow-right"></i></a>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card__icon"><i class="uil uil-truck"></i></div>
-                    <h3 class="service-card__title">Move-In/Out Cleaning</h3>
-                    <p class="service-card__desc">Complete cleaning services for moving in or out. Start fresh in your new space with our magical transformation.</p>
-                    <a href="services.html#move" class="service-card__link">Learn More <i class="uil uil-arrow-right"></i></a>
+                <div class="service-card">
+                    <div class="service-card__icon"><i class="uil uil-window"></i></div>
+                    <h3 class="service-card__title">Windows &amp; Glass</h3>
+                    <p class="service-card__desc">Streak-free window cleaning for crystal clear views. Interior and exterior windows, glass doors, mirrors.</p>
+                    <a href="#quote" class="service-card__link">Get Quote <i class="uil uil-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing -->
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-pricetag-alt"></i> Transparent Pricing</span>
-                <h2 class="section-title">Choose Your Enchantment</h2>
-                <p class="section-subtitle">Flexible plans designed to fit every need and budget</p>
+                <span class="section-badge"><i class="uil uil-pricetag-alt"></i> Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">No hidden fees. Choose the plan that fits your needs.</p>
             </div>
             <div class="pricing__grid">
                 <div class="pricing-card">
                     <div class="pricing-card__header">
-                        <h3>Basic Spell</h3>
+                        <h3>Basic Clean</h3>
                         <div class="pricing-card__price"><span class="currency">$</span>89<span class="period">/visit</span></div>
                     </div>
                     <ul class="pricing-card__features">
-                        <li><i class="uil uil-check-circle"></i> Dusting & vacuuming</li>
+                        <li><i class="uil uil-check-circle"></i> Dusting &amp; vacuuming</li>
                         <li><i class="uil uil-check-circle"></i> Kitchen cleaning</li>
                         <li><i class="uil uil-check-circle"></i> Bathroom cleaning</li>
                         <li><i class="uil uil-check-circle"></i> Up to 1,000 sq ft</li>
                     </ul>
-                    <a href="contact.html" class="btn btn--outline">Get Started</a>
+                    <a href="#quote" class="btn btn--outline" style="width:100%;justify-content:center;">Get Started</a>
                 </div>
                 <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
+                    <span class="popular-badge">Most Popular</span>
                     <div class="pricing-card__header">
-                        <h3>Deep Enchantment</h3>
+                        <h3>Deep Clean</h3>
                         <div class="pricing-card__price"><span class="currency">$</span>149<span class="period">/visit</span></div>
                     </div>
                     <ul class="pricing-card__features">
@@ -168,11 +265,11 @@
                         <li><i class="uil uil-check-circle"></i> Baseboard cleaning</li>
                         <li><i class="uil uil-check-circle"></i> Up to 1,500 sq ft</li>
                     </ul>
-                    <a href="contact.html" class="btn btn--primary">Get Started</a>
+                    <a href="#quote" class="btn btn--primary" style="width:100%;justify-content:center;">Get Started</a>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-card__header">
-                        <h3>Grand Sorcery</h3>
+                        <h3>Premium Clean</h3>
                         <div class="pricing-card__price"><span class="currency">$</span>249<span class="period">/visit</span></div>
                     </div>
                     <ul class="pricing-card__features">
@@ -182,123 +279,83 @@
                         <li><i class="uil uil-check-circle"></i> Eco-friendly products</li>
                         <li><i class="uil uil-check-circle"></i> Up to 2,500 sq ft</li>
                     </ul>
-                    <a href="contact.html" class="btn btn--outline">Get Started</a>
+                    <a href="#quote" class="btn btn--outline" style="width:100%;justify-content:center;">Get Started</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-comment-alt-heart"></i> Happy Clients</span>
+                <span class="section-badge"><i class="uil uil-comment-heart"></i> Reviews</span>
                 <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">Real feedback from satisfied customers across Ottawa-Gatineau</p>
+                <p class="section-subtitle">Trusted by hundreds of homes and businesses across Ottawa-Gatineau</p>
             </div>
             <div class="testimonials__grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-card__stars">
-                        <i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i>
-                    </div>
-                    <p class="testimonial-card__text">"Absolutely magical! My home has never been this clean. The team is professional, friendly, and incredibly thorough. Highly recommend!"</p>
-                    <div class="testimonial-card__author">
-                        <div class="author-avatar"><i class="uil uil-user-circle"></i></div>
-                        <div><strong>Sarah Johnson</strong><span>Ottawa, ON</span></div>
-                    </div>
+                    <div class="testimonial-card__stars"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></div>
+                    <p class="testimonial-card__text">"Absolutely amazing! My home has never been this clean. The team is professional, friendly, and incredibly thorough."</p>
+                    <div class="testimonial-card__author"><div class="author-avatar"><i class="uil uil-user-circle"></i></div><div><strong>Sarah Johnson</strong><span>Ottawa, ON</span></div></div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-card__stars">
-                        <i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i>
-                    </div>
-                    <p class="testimonial-card__text">"We use Witches' Cleaning for our office space and the results are always impeccable. Our clients always comment on how spotless everything looks."</p>
-                    <div class="testimonial-card__author">
-                        <div class="author-avatar"><i class="uil uil-user-circle"></i></div>
-                        <div><strong>Michael Chen</strong><span>Gatineau, QC</span></div>
-                    </div>
+                    <div class="testimonial-card__stars"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></div>
+                    <p class="testimonial-card__text">"We use Witches' Cleaning for our office and the results are always impeccable. Our clients comment on how spotless everything looks."</p>
+                    <div class="testimonial-card__author"><div class="author-avatar"><i class="uil uil-user-circle"></i></div><div><strong>Michael Chen</strong><span>Gatineau, QC</span></div></div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-card__stars">
-                        <i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i>
-                    </div>
-                    <p class="testimonial-card__text">"The move-out cleaning service was a lifesaver! They helped us get our full deposit back. Fast, efficient, and very reasonably priced."</p>
-                    <div class="testimonial-card__author">
-                        <div class="author-avatar"><i class="uil uil-user-circle"></i></div>
-                        <div><strong>Emily Rodriguez</strong><span>Ottawa, ON</span></div>
-                    </div>
+                    <div class="testimonial-card__stars"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></div>
+                    <p class="testimonial-card__text">"The move-out cleaning was a lifesaver! They helped us get our full deposit back. Fast, efficient, and very reasonably priced."</p>
+                    <div class="testimonial-card__author"><div class="author-avatar"><i class="uil uil-user-circle"></i></div><div><strong>Emily Rodriguez</strong><span>Ottawa, ON</span></div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
+    <!-- FAQ -->
+    <section class="faq">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge"><i class="uil uil-question-circle"></i> FAQ</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions about our services</p>
             </div>
             <div class="faq__list">
                 <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>Do I need to provide cleaning supplies?</span>
-                        <i class="uil uil-angle-down"></i>
-                    </button>
-                    <div class="faq-item__answer">
-                        <p>No, we bring all necessary cleaning supplies and equipment. We use eco-friendly, high-quality products. If you prefer specific products, we are happy to accommodate.</p>
-                    </div>
+                    <button class="faq-item__question">Do I need to provide cleaning supplies? <i class="uil uil-angle-down"></i></button>
+                    <div class="faq-item__answer"><p>No, we bring all necessary supplies and equipment. We use eco-friendly, high-quality products. If you prefer specific products, we're happy to accommodate.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>How long does a typical cleaning take?</span>
-                        <i class="uil uil-angle-down"></i>
-                    </button>
-                    <div class="faq-item__answer">
-                        <p>A basic clean typically takes 2-3 hours, while a deep clean can take 4-6 hours depending on the size and condition of your property.</p>
-                    </div>
+                    <button class="faq-item__question">How long does a typical cleaning take? <i class="uil uil-angle-down"></i></button>
+                    <div class="faq-item__answer"><p>A basic clean typically takes 2-3 hours, while a deep clean can take 4-6 hours depending on the size and condition of your property.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>Are you insured and bonded?</span>
-                        <i class="uil uil-angle-down"></i>
-                    </button>
-                    <div class="faq-item__answer">
-                        <p>Yes, Witches' Cleaning is fully insured and bonded for your peace of mind. All team members are background-checked professionals.</p>
-                    </div>
+                    <button class="faq-item__question">Are you insured and bonded? <i class="uil uil-angle-down"></i></button>
+                    <div class="faq-item__answer"><p>Yes, Witches' Cleaning is fully insured and bonded. All team members are background-checked professionals.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>Can I schedule recurring cleaning services?</span>
-                        <i class="uil uil-angle-down"></i>
-                    </button>
-                    <div class="faq-item__answer">
-                        <p>Absolutely! We offer weekly, bi-weekly, and monthly recurring services at discounted rates. Contact us to set up a custom schedule.</p>
-                    </div>
+                    <button class="faq-item__question">Can I schedule recurring services? <i class="uil uil-angle-down"></i></button>
+                    <div class="faq-item__answer"><p>Absolutely! We offer weekly, bi-weekly, and monthly recurring services at discounted rates. Contact us to set up a custom schedule.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>What areas do you serve?</span>
-                        <i class="uil uil-angle-down"></i>
-                    </button>
-                    <div class="faq-item__answer">
-                        <p>We proudly serve all areas of Ottawa and Gatineau, including surrounding communities. Contact us to confirm service availability in your area.</p>
-                    </div>
+                    <button class="faq-item__question">What areas do you serve? <i class="uil uil-angle-down"></i></button>
+                    <div class="faq-item__answer"><p>We proudly serve all areas of Ottawa and Gatineau, including Kanata, Nepean, Orleans, Barrhaven, Hull, and Aylmer.</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta">
         <div class="container">
             <div class="cta__content">
-                <h2>Ready for a Magical Clean?</h2>
-                <p>Book your first cleaning today and experience the Witches' Cleaning difference. New clients get 15% off their first visit!</p>
-                <a href="contact.html" class="btn btn--primary btn--lg"><i class="uil uil-magic-wand"></i> Book Your Spell Now</a>
+                <h2>Ready for a Spotless Space?</h2>
+                <p>Book your first cleaning today. New clients get 15% off their first visit!</p>
+                <a href="#quote" class="btn btn--white btn--lg"><i class="uil uil-calendar-alt"></i> Book Your Cleaning Now</a>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -306,48 +363,48 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <a href="index.html" class="footer__logo">
-                        <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350802.png" alt="Witches Cleaning Logo" class="footer-logo-img">
+                        <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350802.png" alt="Logo" class="footer-logo-img">
                         <span>Witches' Cleaning</span>
                     </a>
-                    <p>Professional cleaning services for homes and businesses in Ottawa-Gatineau. Where cleaning meets magic.</p>
+                    <p>Professional cleaning services for homes and businesses in Ottawa-Gatineau.</p>
                     <div class="footer__social">
-                        <a href="#" aria-label="Facebook"><i class="uil uil-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="uil uil-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="uil uil-twitter"></i></a>
+                        <a href="#"><i class="uil uil-facebook-f"></i></a>
+                        <a href="#"><i class="uil uil-instagram"></i></a>
+                        <a href="#"><i class="uil uil-twitter"></i></a>
                     </div>
                 </div>
                 <div class="footer__links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#quote">Get Quote</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer__links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html#residential">Residential Cleaning</a></li>
-                        <li><a href="services.html#commercial">Commercial Cleaning</a></li>
-                        <li><a href="services.html#deep">Deep Cleaning</a></li>
-                        <li><a href="services.html#move">Move-In/Out</a></li>
+                        <li><a href="#services">Residential</a></li>
+                        <li><a href="#services">Commercial</a></li>
+                        <li><a href="#services">Deep Cleaning</a></li>
+                        <li><a href="#services">Windows</a></li>
                     </ul>
                 </div>
                 <div class="footer__contact">
-                    <h4>Contact Info</h4>
+                    <h4>Contact</h4>
                     <ul>
                         <li><i class="uil uil-map-marker"></i> Ottawa-Gatineau, ON/QC</li>
-                        <li><i class="uil uil-phone"></i> (613) 555-0123</li>
+                        <li><i class="uil uil-phone"></i> (613) 555-1234</li>
                         <li><i class="uil uil-envelope"></i> info@witchescleaning.ca</li>
                     </ul>
                     <div class="footer__lang">
-                        <a href="fr/index.html" class="lang-link"><i class="uil uil-globe"></i> Version fran\u00e7aise</a>
+                        <a href="fr/index.html" class="lang-link"><i class="uil uil-globe"></i> Version française</a>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2024 Witches' Cleaning. All rights reserved. | <a href="fr/index.html">Fran\u00e7ais</a></p>
+                <p>&copy; 2025 Witches' Cleaning. All rights reserved. | <a href="fr/index.html">Français</a></p>
             </div>
         </div>
     </footer>
