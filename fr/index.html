@@ -3,293 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Witches' Cleaning - Services de nettoyage magiques pour votre maison et entreprise dans la r\u00e9gion Ottawa-Gatineau.">
-    <title>Witches' Cleaning | Nettoyage Magique pour Votre Maison - Ottawa-Gatineau</title>
-    <link rel="icon" type="image/png" href="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350802.png">
+    <meta name="description" content="Witches' Cleaning - Services de nettoyage professionnels pour votre maison et entreprise à Ottawa-Gatineau. Obtenez une soumission instantanée en ligne.">
+    <meta name="keywords" content="services de nettoyage, Ottawa, Gatineau, nettoyage résidentiel, nettoyage commercial, grand ménage, calculateur de prix">
+    <title>Witches' Cleaning | Nettoyage Professionnel Ottawa-Gatineau</title>
+    <link rel="icon" type="image/png" href="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350882.png">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Language Banner -->
-    <div class="lang-banner">
+    <!-- Bannière de Langue -->
+    <div class="lang-banner" id="langBanner">
         <div class="container">
-            <span>This site is also available in English</span>
-            <a href="../index.html" class="lang-switch-btn"><i class="uil uil-globe"></i> English</a>
+            <span>Ce site est aussi disponible en anglais</span>
+            <a href="../index.html" class="lang-switch-btn" id="langSwitchBtn">
+                <i class="uil uil-globe"></i> English
+            </a>
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- En-tête -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
-                <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350802.png" alt="Witches Cleaning Logo" class="logo-img">
-                <span class="logo-text">Witches' <span class="accent">Cleaning</span></span>
+                <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350882.png" alt="Logo Witches Cleaning" class="nav__logo-img">
+                <span class="nav__logo-text">Witches'<br><span>Cleaning</span></span>
             </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__link active">Accueil</a></li>
-                    <li class="nav__item"><a href="../services.html" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="../about.html" class="nav__link">\u00c0 propos</a></li>
-                    <li class="nav__item"><a href="../contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#quote" class="nav__link">Soumission</a></li>
+                    <li class="nav__item"><a href="#pricing" class="nav__link">Tarifs</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
-                <a href="../contact.html" class="nav__cta"><i class="uil uil-magic-wand"></i> R\u00e9server</a>
             </div>
+            <a href="#quote" class="btn btn--primary nav__cta">Soumission Gratuite</a>
             <div class="nav__toggle" id="nav-toggle"><i class="uil uil-bars"></i></div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero__particles" id="particles"></div>
-        <div class="hero__content container">
-            <div class="hero__text">
-                <span class="hero__badge"><i class="uil uil-star"></i> Experts en Nettoyage Magique</span>
-                <h1 class="hero__title">Nous Faisons <span class="magic-text">Briller</span> Votre Espace Comme par Magie</h1>
-                <p class="hero__description">Des services de nettoyage enchanteurs pour les maisons et entreprises d'Ottawa-Gatineau. Notre equipe de sorciers du nettoyage transforme chaque espace avec soin et precision.</p>
-                <div class="hero__buttons">
-                    <a href="../contact.html" class="btn btn--primary"><i class="uil uil-calendar-alt"></i> Reservez Votre Nettoyage</a>
-                    <a href="../services.html" class="btn btn--outline"><i class="uil uil-arrow-right"></i> Nos Services</a>
+    <main>
+        <!-- Section Héros -->
+        <section class="hero">
+            <div class="hero__background">
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__badge"><i class="uil uil-star"></i> Experts en Nettoyage de Confiance</span>
+                    <h1 class="hero__title">Maisons et Bureaux Impeccables à <span class="highlight">Ottawa-Gatineau</span></h1>
+                    <p class="hero__description">Nettoyage professionnel en qui vous pouvez avoir confiance. Réservez en ligne en 60 secondes et détendez-vous pendant que nous faisons briller votre espace.</p>
+                    <div class="hero__buttons">
+                        <a href="#quote" class="btn btn--primary btn--lg"><i class="uil uil-file-alt"></i> Soumission Gratuite</a>
+                        <a href="#services" class="btn btn--outline btn--lg"><i class="uil uil-arrow-right"></i> Nos Services</a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat"><span class="stat__number">500+</span><span class="stat__label">Foyers Satisfaits</span></div>
+                        <div class="stat"><span class="stat__number">5.0</span><span class="stat__label">Évaluation</span></div>
+                        <div class="stat"><span class="stat__number">100%</span><span class="stat__label">Entièrement Assuré</span></div>
+                    </div>
                 </div>
-                <div class="hero__stats">
-                    <div class="stat"><span class="stat__number">500+</span><span class="stat__label">Maisons Heureuses</span></div>
-                    <div class="stat"><span class="stat__number">5.0</span><span class="stat__label"><i class="uil uil-star"></i> Note</span></div>
-                    <div class="stat"><span class="stat__number">24/7</span><span class="stat__label">Support</span></div>
+                <div class="hero__image">
+                    <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" alt="Witches Cleaning - Services de Nettoyage Professionnels" class="hero__img">
                 </div>
             </div>
-            <div class="hero__visual">
-                <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" alt="Witches Cleaning" class="hero__image">
-                <div class="hero__glow"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Video -->
-    <section class="video-showcase" id="video">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge"><i class="uil uil-play-circle"></i> Voyez la Magie</span>
-                <h2 class="section-title">Regardez Nos Sorciers en Action</h2>
-                <p class="section-subtitle">Decouvrez comment notre equipe transforme les espaces</p>
+        <!-- Section Soumission et Calculateur -->
+        <section class="quote-section" id="quote">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="uil uil-calculator"></i> Estimation Gratuite</span>
+                    <h2 class="section-title">Obtenez Votre Soumission Instantanée</h2>
+                    <p class="section-subtitle">Remplissez le formulaire pour une soumission personnalisée, ou utilisez notre calculateur pour voir les prix instantanément</p>
+                </div>
+                <div class="quote-grid">
+                    <div class="quote-form-card">
+                        <h3 class="card-title"><i class="uil uil-file-edit-alt"></i> Soumission Gratuite Rapide</h3>
+                        <p class="card-subtitle">Parlez-nous de votre espace et nous vous répondrons dans l'heure</p>
+                        <form class="quote-form" id="quoteForm">
+                            <div class="form-row">
+                                <div class="form-group"><label for="qName">Votre Nom</label><input type="text" id="qName" name="name" placeholder="Jean Dupont" required></div>
+                                <div class="form-group"><label for="qEmail">Adresse Courriel</label><input type="email" id="qEmail" name="email" placeholder="vous@email.com" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label for="qPhone">Téléphone</label><input type="tel" id="qPhone" name="phone" placeholder="(613) 555-0000"></div>
+                                <div class="form-group"><label for="qService">Type de Service</label>
+                                    <select id="qService" name="service" required>
+                                        <option value="">Sélectionnez...</option>
+                                        <option value="residential">Résidentiel Hebdomadaire</option>
+                                        <option value="commercial">Nettoyage Commercial</option>
+                                        <option value="deep">Grand Ménage / Déménagement</option>
+                                        <option value="windows">Fenêtres et Tapis</option>
+                                        <option value="eco">Nettoyage Écologique</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group"><label for="qMessage">Détails Supplémentaires</label><textarea id="qMessage" name="message" rows="3" placeholder="Décrivez votre espace ou besoins spéciaux..."></textarea></div>
+                            <button type="submit" class="form-submit"><i class="uil uil-envelope-send"></i> Obtenir Ma Soumission Gratuite</button>
+                        </form>
+                        <p class="form-note">Ou appelez-nous: <a href="tel:+16135551234">(613) 555-1234</a></p>
+                    </div>
+                    <div class="calculator-card">
+                        <h3 class="card-title"><i class="uil uil-calculator-alt"></i> Calculateur de Prix Instantané</h3>
+                        <p class="card-subtitle">Personnalisez votre nettoyage et voyez les prix en temps réel. Aucun frais caché.</p>
+                        <div class="calc-sliders">
+                            <div class="slider-group"><label>Superficie<span class="slider-value" id="sqftValue">1,500 pi²</span></label><input type="range" id="sqftSlider" min="500" max="5000" value="1500" step="100"></div>
+                            <div class="slider-group"><label>Chambres<span class="slider-value" id="bedroomValue">3</span></label><input type="range" id="bedroomSlider" min="1" max="6" value="3"></div>
+                            <div class="slider-group"><label>Salles de Bain<span class="slider-value" id="bathroomValue">2</span></label><input type="range" id="bathroomSlider" min="1" max="5" value="2"></div>
+                        </div>
+                        <label style="font-size:0.85rem;font-weight:600;color:#475569;margin-bottom:0.5rem;display:block;">Fréquence</label>
+                        <div class="frequency-options">
+                            <label class="freq-option"><input type="radio" name="frequency" value="once" checked> Unique</label>
+                            <label class="freq-option discount"><input type="radio" name="frequency" value="weekly"> Hebdo -15%</label>
+                            <label class="freq-option discount"><input type="radio" name="frequency" value="biweekly"> Bi-Hebdo -10%</label>
+                            <label class="freq-option discount"><input type="radio" name="frequency" value="monthly"> Mensuel -5%</label>
+                        </div>
+                        <label style="font-size:0.85rem;font-weight:600;color:#475569;margin:1rem 0 0.5rem;display:block;">Options Supplémentaires</label>
+                        <div class="addons-grid">
+                            <label class="addon-item"><input type="checkbox" data-price="50"> Grand ménage +50$</label>
+                            <label class="addon-item"><input type="checkbox" data-price="20"> Intérieur frigo +20$</label>
+                            <label class="addon-item"><input type="checkbox" data-price="25"> Intérieur four +25$</label>
+                            <label class="addon-item"><input type="checkbox" data-price="40"> Fenêtres +40$</label>
+                            <label class="addon-item"><input type="checkbox" data-price="35"> Lessive +35$</label>
+                            <label class="addon-item"><input type="checkbox" data-price="30"> Tapis +30$</label>
+                        </div>
+                        <div class="calc-total">
+                            <div class="price">$<span id="calcPrice">174</span></div>
+                            <div class="price-label">estimé par visite</div>
+                            <a href="#quote" class="btn btn--white"><i class="uil uil-file-alt"></i> Soumission Détaillée</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="video-wrapper">
-                <video controls poster="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" class="showcase-video">
-                    <source src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b32f2dd985e2d59a245d.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
+        <!-- Section Vidéo -->
+        <section class="video-showcase"><div class="container"><div class="video-content">
+            <div class="video-wrapper"><video controls poster="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/698fb04b7d68771636d6481b.png" class="showcase-video"><source src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b32f2dd985e2d59a245d.mp4" type="video/mp4"></video></div>
+            <div class="video-info">
+                <h3>Voyez Notre Équipe en Action</h3>
+                <p>Découvrez comment notre équipe transforme les espaces d'Ottawa-Gatineau avec soin et produits écologiques.</p>
+                <ul class="video-features">
+                    <li><i class="uil uil-check-circle"></i> Professionnels formés et assurés</li>
+                    <li><i class="uil uil-check-circle"></i> Produits écologiques</li>
+                    <li><i class="uil uil-check-circle"></i> Satisfaction garantie</li>
+                    <li><i class="uil uil-check-circle"></i> Horaires flexibles 7j/7</li>
+                </ul>
+            </div>
+        </div></div></section>
+
+        <!-- Section Services -->
+        <section class="services" id="services"><div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-cleaning-flask"></i> Nos Sortileges</span>
-                <h2 class="section-title">Services de Nettoyage Enchantes</h2>
-                <p class="section-subtitle">Des solutions professionnelles pour faire briller chaque recoin</p>
+                <span class="section-badge"><i class="uil uil-brush-alt"></i> Nos Services</span>
+                <h2 class="section-title">Solutions de Nettoyage Professionnelles</h2>
+                <p class="section-subtitle">Fiables, minutieuses et adaptées à chaque espace</p>
             </div>
             <div class="services__grid">
-                <div class="service-card">
-                    <div class="service-card__icon"><i class="uil uil-home-alt"></i></div>
-                    <h3 class="service-card__title">Nettoyage Residentiel</h3>
-                    <p class="service-card__desc">Gardez votre maison etincelante avec nos services complets de nettoyage residentiel.</p>
-                    <a href="../services.html#residential" class="service-card__link">En savoir plus <i class="uil uil-arrow-right"></i></a>
-                </div>
-                <div class="service-card featured">
-                    <div class="service-card__icon"><i class="uil uil-building"></i></div>
-                    <h3 class="service-card__title">Nettoyage Commercial</h3>
-                    <p class="service-card__desc">Nettoyage professionnel pour bureaux, commerces et proprietes commerciales.</p>
-                    <a href="../services.html#commercial" class="service-card__link">En savoir plus <i class="uil uil-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon"><i class="uil uil-search-plus"></i></div>
-                    <h3 class="service-card__title">Grand Menage</h3>
-                    <p class="service-card__desc">Nettoyage en profondeur du sol au plafond pour un nouveau depart ou des occasions speciales.</p>
-                    <a href="../services.html#deep" class="service-card__link">En savoir plus <i class="uil uil-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon"><i class="uil uil-truck"></i></div>
-                    <h3 class="service-card__title">Nettoyage Demenagement</h3>
-                    <p class="service-card__desc">Services complets de nettoyage pour emmenager ou demenager de votre propriete.</p>
-                    <a href="../services.html#move" class="service-card__link">En savoir plus <i class="uil uil-arrow-right"></i></a>
-                </div>
+                <div class="service-card"><div class="service-card__icon"><i class="uil uil-home"></i></div><h3 class="service-card__title">Résidentiel Hebdomadaire</h3><p class="service-card__desc">Époussetage, aspirateur, nettoyage cuisine et salle de bain pour garder votre maison impeccable.</p><a href="#quote" class="service-card__link">Soumission <i class="uil uil-arrow-right"></i></a></div>
+                <div class="service-card"><div class="service-card__icon"><i class="uil uil-building"></i></div><h3 class="service-card__title">Nettoyage Commercial</h3><p class="service-card__desc">Bureaux, commerces et espaces professionnels nettoyés après les heures d'ouverture.</p><a href="#quote" class="service-card__link">Soumission <i class="uil uil-arrow-right"></i></a></div>
+                <div class="service-card"><div class="service-card__icon"><i class="uil uil-sparkles"></i></div><h3 class="service-card__title">Grand Ménage</h3><p class="service-card__desc">Nettoyage en profondeur pour déménagements, rénovations ou un nouveau départ.</p><a href="#quote" class="service-card__link">Soumission <i class="uil uil-arrow-right"></i></a></div>
+                <div class="service-card"><div class="service-card__icon"><i class="uil uil-window"></i></div><h3 class="service-card__title">Fenêtres et Vitres</h3><p class="service-card__desc">Nettoyage de fenêtres sans traces pour une vue cristalline, intérieur et extérieur.</p><a href="#quote" class="service-card__link">Soumission <i class="uil uil-arrow-right"></i></a></div>
             </div>
-        </div>
-    </section>
+        </div></section>
 
-    <!-- Pricing -->
-    <section class="pricing" id="pricing">
-        <div class="container">
+        <!-- Section Tarifs -->
+        <section class="pricing" id="pricing"><div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-pricetag-alt"></i> Tarifs Transparents</span>
-                <h2 class="section-title">Choisissez Votre Enchantement</h2>
-                <p class="section-subtitle">Des forfaits flexibles pour chaque besoin et budget</p>
+                <span class="section-badge"><i class="uil uil-tag-alt"></i> Tarifs</span>
+                <h2 class="section-title">Tarification Simple et Transparente</h2>
+                <p class="section-subtitle">Aucun frais caché. Choisissez le forfait qui vous convient.</p>
             </div>
             <div class="pricing__grid">
-                <div class="pricing-card">
-                    <div class="pricing-card__header">
-                        <h3>Sort Basique</h3>
-                        <div class="pricing-card__price"><span class="currency">$</span>89<span class="period">/visite</span></div>
-                    </div>
-                    <ul class="pricing-card__features">
-                        <li><i class="uil uil-check-circle"></i> Epoussetage et aspirateur</li>
-                        <li><i class="uil uil-check-circle"></i> Nettoyage cuisine</li>
-                        <li><i class="uil uil-check-circle"></i> Nettoyage salle de bain</li>
-                        <li><i class="uil uil-check-circle"></i> Jusqu'a 1 000 pi2</li>
-                    </ul>
-                    <a href="../contact.html" class="btn btn--outline">Commencer</a>
-                </div>
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Le Plus Populaire</div>
-                    <div class="pricing-card__header">
-                        <h3>Enchantement Profond</h3>
-                        <div class="pricing-card__price"><span class="currency">$</span>149<span class="period">/visite</span></div>
-                    </div>
-                    <ul class="pricing-card__features">
-                        <li><i class="uil uil-check-circle"></i> Tout du forfait Basique</li>
-                        <li><i class="uil uil-check-circle"></i> Interieur des appareils</li>
-                        <li><i class="uil uil-check-circle"></i> Nettoyage des vitres</li>
-                        <li><i class="uil uil-check-circle"></i> Plinthes</li>
-                        <li><i class="uil uil-check-circle"></i> Jusqu'a 1 500 pi2</li>
-                    </ul>
-                    <a href="../contact.html" class="btn btn--primary">Commencer</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card__header">
-                        <h3>Grande Sorcellerie</h3>
-                        <div class="pricing-card__price"><span class="currency">$</span>249<span class="period">/visite</span></div>
-                    </div>
-                    <ul class="pricing-card__features">
-                        <li><i class="uil uil-check-circle"></i> Tout du forfait Profond</li>
-                        <li><i class="uil uil-check-circle"></i> Nettoyage des tapis</li>
-                        <li><i class="uil uil-check-circle"></i> Detaillage des meubles</li>
-                        <li><i class="uil uil-check-circle"></i> Produits ecologiques</li>
-                        <li><i class="uil uil-check-circle"></i> Jusqu'a 2 500 pi2</li>
-                    </ul>
-                    <a href="../contact.html" class="btn btn--outline">Commencer</a>
-                </div>
+                <div class="pricing-card"><h3 class="pricing-card__title">Nettoyage de Base</h3><div class="pricing-card__price">$<span>89</span>/visite</div><ul class="pricing-card__features"><li><i class="uil uil-check"></i>Époussetage et aspirateur</li><li><i class="uil uil-check"></i>Nettoyage cuisine</li><li><i class="uil uil-check"></i>Nettoyage salle de bain</li><li><i class="uil uil-check"></i>Jusqu'à 1,000 pi²</li></ul><a href="#quote" class="btn btn--outline">Commencer</a></div>
+                <div class="pricing-card pricing-card--featured"><span class="pricing-card__badge">Plus Populaire</span><h3 class="pricing-card__title">Nettoyage en Profondeur</h3><div class="pricing-card__price">$<span>149</span>/visite</div><ul class="pricing-card__features"><li><i class="uil uil-check"></i>Tout du forfait Base</li><li><i class="uil uil-check"></i>Intérieur électroménagers</li><li><i class="uil uil-check"></i>Nettoyage fenêtres</li><li><i class="uil uil-check"></i>Plinthes</li><li><i class="uil uil-check"></i>Jusqu'à 1,500 pi²</li></ul><a href="#quote" class="btn btn--primary">Commencer</a></div>
+                <div class="pricing-card"><h3 class="pricing-card__title">Nettoyage Premium</h3><div class="pricing-card__price">$<span>249</span>/visite</div><ul class="pricing-card__features"><li><i class="uil uil-check"></i>Tout du forfait Profondeur</li><li><i class="uil uil-check"></i>Nettoyage tapis</li><li><i class="uil uil-check"></i>Détaillage meubles</li><li><i class="uil uil-check"></i>Produits écologiques</li><li><i class="uil uil-check"></i>Jusqu'à 2,500 pi²</li></ul><a href="#quote" class="btn btn--outline">Commencer</a></div>
             </div>
-        </div>
-    </section>
+        </div></section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
+        <!-- Section Témoignages -->
+        <section class="testimonials" id="reviews"><div class="container">
             <div class="section-header">
-                <span class="section-badge"><i class="uil uil-comment-alt-heart"></i> Clients Satisfaits</span>
+                <span class="section-badge"><i class="uil uil-comment-alt-heart"></i> Avis</span>
                 <h2 class="section-title">Ce Que Disent Nos Clients</h2>
+                <p class="section-subtitle">La confiance de centaines de foyers et entreprises à Ottawa-Gatineau</p>
             </div>
             <div class="testimonials__grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></div>
-                    <p class="testimonial-card__text">"Absolument magique! Ma maison n'a jamais ete aussi propre. L'equipe est professionnelle et incroyablement minutieuse."</p>
-                    <div class="testimonial-card__author"><div class="author-avatar"><i class="uil uil-user-circle"></i></div><div><strong>Sarah Johnson</strong><span>Ottawa, ON</span></div></div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></div>
-                    <p class="testimonial-card__text">"Nous utilisons Witches' Cleaning pour notre bureau et les resultats sont toujours impeccables. Nos clients commentent toujours la proprete."</p>
-                    <div class="testimonial-card__author"><div class="author-avatar"><i class="uil uil-user-circle"></i></div><div><strong>Michael Chen</strong><span>Gatineau, QC</span></div></div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-card__stars"><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i></div>
-                    <p class="testimonial-card__text">"Le service de nettoyage de demenagement nous a sauve la mise! Ils nous ont aide a recuperer notre depot complet."</p>
-                    <div class="testimonial-card__author"><div class="author-avatar"><i class="uil uil-user-circle"></i></div><div><strong>Emily Rodriguez</strong><span>Ottawa, ON</span></div></div>
-                </div>
+                <div class="testimonial-card"><div class="testimonial-card__content"><p class="testimonial-card__text">"Ça ne pourrait pas être mieux! Ma maison n'a jamais été aussi propre. L'équipe est professionnelle, sympathique et incroyablement minutieuse."</p></div><div class="testimonial-card__author"><div class="author-info"><strong>Sophie Martin</strong><span>Ottawa, ON</span></div><div class="stars"><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i></div></div></div>
+                <div class="testimonial-card"><div class="testimonial-card__content"><p class="testimonial-card__text">"Nous utilisons Witches' Cleaning pour notre bureau et les résultats sont toujours impeccables. Nos clients commentent à quel point tout est propre."</p></div><div class="testimonial-card__author"><div class="author-info"><strong>Michel Tremblay</strong><span>Gatineau, QC</span></div><div class="stars"><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i></div></div></div>
+                <div class="testimonial-card"><div class="testimonial-card__content"><p class="testimonial-card__text">"Le nettoyage de déménagement m'a sauvé la vie! Ils nous ont aidés à récupérer notre dépôt en entier. Rapide, efficace et très raisonnable."</p></div><div class="testimonial-card__author"><div class="author-info"><strong>Émilie Gagnon</strong><span>Ottawa, ON</span></div><div class="stars"><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i><i class="uis uis-star"></i></div></div></div>
             </div>
-        </div>
-    </section>
+        </div></section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
+        <!-- Section FAQ -->
+        <section class="faq" id="faq"><div class="container">
             <div class="section-header">
                 <span class="section-badge"><i class="uil uil-question-circle"></i> FAQ</span>
-                <h2 class="section-title">Questions Frequentes</h2>
+                <h2 class="section-title">Questions Fréquentes</h2>
             </div>
-            <div class="faq__list">
-                <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')"><span>Dois-je fournir les produits de nettoyage?</span><i class="uil uil-angle-down"></i></button>
-                    <div class="faq-item__answer"><p>Non, nous apportons tous les produits et equipements necessaires. Nous utilisons des produits ecologiques de haute qualite.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')"><span>Combien de temps dure un nettoyage typique?</span><i class="uil uil-angle-down"></i></button>
-                    <div class="faq-item__answer"><p>Un nettoyage de base prend 2 a 3 heures, un nettoyage en profondeur peut prendre 4 a 6 heures selon la taille de votre propriete.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')"><span>Etes-vous assures?</span><i class="uil uil-angle-down"></i></button>
-                    <div class="faq-item__answer"><p>Oui, Witches' Cleaning est entierement assure pour votre tranquillite d'esprit. Tous les membres sont des professionnels verifies.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-item__question" onclick="this.parentElement.classList.toggle('active')"><span>Quelles regions desservez-vous?</span><i class="uil uil-angle-down"></i></button>
-                    <div class="faq-item__answer"><p>Nous desservons fierement toutes les regions d'Ottawa et Gatineau, y compris les communautes environnantes.</p></div>
-                </div>
+            <div class="faq__grid">
+                <div class="faq-item"><button class="faq-question"><span>Dois-je fournir les produits de nettoyage?</span><i class="uil uil-angle-down"></i></button><div class="faq-answer"><p>Non, nous apportons tous les produits et équipements nécessaires. Nous utilisons des produits écologiques de haute qualité. Si vous préférez des produits spécifiques, nous serons heureux de les utiliser.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Combien de temps dure un nettoyage typique?</span><i class="uil uil-angle-down"></i></button><div class="faq-answer"><p>Un nettoyage de base prend généralement 2-3 heures, tandis qu'un nettoyage en profondeur peut prendre 4-6 heures selon la taille et l'état de votre propriété.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Êtes-vous assurés et cautés?</span><i class="uil uil-angle-down"></i></button><div class="faq-answer"><p>Oui, Witches' Cleaning est entièrement assurée et cautionnée. Tous les membres de notre équipe ont fait l'objet d'une vérification des antécédents.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Puis-je planifier des services récurrents?</span><i class="uil uil-angle-down"></i></button><div class="faq-answer"><p>Absolument! Nous offrons des services hebdomadaires, bi-hebdomadaires et mensuels à tarifs réduits. Contactez-nous pour établir un horaire personnalisé.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Quelles régions desservez-vous?</span><i class="uil uil-angle-down"></i></button><div class="faq-answer"><p>Nous desservons fièrement toutes les régions d'Ottawa et Gatineau, incluant Kanata, Nepean, Orléans, Barrhaven, Hull et Aylmer.</p></div></div>
             </div>
-        </div>
-    </section>
+        </div></section>
 
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
+        <!-- Section CTA -->
+        <section class="cta"><div class="container">
             <div class="cta__content">
-                <h2>Pret pour un Nettoyage Magique?</h2>
-                <p>Reservez votre premier nettoyage et decouvrez la difference Witches' Cleaning. Nouveaux clients: 15% de rabais!</p>
-                <a href="../contact.html" class="btn btn--primary btn--lg"><i class="uil uil-magic-wand"></i> Reservez Maintenant</a>
+                <h2>Prêt pour un Espace Impeccable?</h2>
+                <p>Réservez votre premier nettoyage aujourd'hui. Les nouveaux clients obtiennent 15% de rabais sur leur première visite!</p>
+                <a href="#quote" class="btn btn--white btn--lg"><i class="uil uil-calendar-alt"></i> Réservez Votre Nettoyage Maintenant</a>
             </div>
-        </div>
-    </section>
+        </div></section>
+    </main>
 
-    <!-- Footer -->
+    <!-- Pied de Page -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__brand">
                     <a href="index.html" class="footer__logo">
-                        <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350802.png" alt="Logo" class="footer-logo-img">
+                        <img src="https://storage.googleapis.com/msgsndr/DrWrcsKJD70aUoCz7me4/media/6986b23e0708e46431350882.png" alt="Logo" class="footer__logo-img">
                         <span>Witches' Cleaning</span>
                     </a>
-                    <p>Services de nettoyage professionnels pour maisons et entreprises dans Ottawa-Gatineau.</p>
-                    <div class="footer__social">
-                        <a href="#"><i class="uil uil-facebook-f"></i></a>
-                        <a href="#"><i class="uil uil-instagram"></i></a>
-                        <a href="#"><i class="uil uil-twitter"></i></a>
-                    </div>
+                    <p>Services de nettoyage professionnels pour les maisons et entreprises à Ottawa-Gatineau.</p>
+                    <div class="footer__social"><a href="#"><i class="uil uil-facebook-f"></i></a><a href="#"><i class="uil uil-instagram"></i></a><a href="#"><i class="uil uil-twitter"></i></a></div>
                 </div>
-                <div class="footer__links">
-                    <h4>Liens Rapides</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="../services.html">Services</a></li>
-                        <li><a href="../about.html">A propos</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="../services.html#residential">Nettoyage Residentiel</a></li>
-                        <li><a href="../services.html#commercial">Nettoyage Commercial</a></li>
-                        <li><a href="../services.html#deep">Grand Menage</a></li>
-                        <li><a href="../services.html#move">Demenagement</a></li>
-                    </ul>
-                </div>
-                <div class="footer__contact">
-                    <h4>Coordonnees</h4>
-                    <ul>
-                        <li><i class="uil uil-map-marker"></i> Ottawa-Gatineau, ON/QC</li>
-                        <li><i class="uil uil-phone"></i> (613) 555-0123</li>
-                        <li><i class="uil uil-envelope"></i> info@witchescleaning.ca</li>
-                    </ul>
-                    <div class="footer__lang">
-                        <a href="../index.html" class="lang-link"><i class="uil uil-globe"></i> English Version</a>
-                    </div>
+                <div class="footer__links"><h4>Liens Rapides</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="#services">Services</a></li><li><a href="#quote">Soumission</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer__links"><h4>Services</h4><ul><li><a href="#services">Résidentiel</a></li><li><a href="#services">Commercial</a></li><li><a href="#services">Grand Ménage</a></li><li><a href="#services">Fenêtres</a></li></ul></div>
+                <div class="footer__contact"><h4>Contact</h4><ul><li><i class="uil uil-map-marker"></i> Ottawa-Gatineau, ON/QC</li><li><i class="uil uil-phone"></i> (613) 555-1234</li><li><i class="uil uil-envelope"></i> info@witchescleaning.ca</li></ul>
+                    <div class="footer__lang"><a href="../index.html" class="lang-link"><i class="uil uil-globe"></i> English Version</a></div>
                 </div>
             </div>
-            <div class="footer__bottom">
-                <p>&copy; 2024 Witches' Cleaning. Tous droits reserves. | <a href="../index.html">English</a></p>
-            </div>
+            <div class="footer__bottom"><p>&copy; 2025 Witches' Cleaning. Tous droits réservés. | <a href="../index.html">English</a></p></div>
         </div>
     </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>
